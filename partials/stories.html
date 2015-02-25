@@ -1,0 +1,18 @@
+<div ng-show="stories.length">
+  <h1>Here are the latest posted stories:</h1>
+  <ul>
+    <li ng-repeat="item in stories">
+      <!-- <a ui-serf="stories." Add code here to find posted stories -->
+    </li>
+  </ul>
+</div>
+
+<div class="col-md-4">
+  <h3>Add a story</h3>
+  <form ng-submit="StoriesFactory.addStory()" class="form-inline" role="form">
+    <div class="form-group">
+      <input type="text" ng-model="StoriesFactory.storyName" class="form-control" placeholder="Enter link here">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
