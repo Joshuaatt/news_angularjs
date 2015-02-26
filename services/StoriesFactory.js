@@ -11,5 +11,11 @@ hackerNews.factory('StoriesFactory', function StoriesFactory() {
       factory.storyTitle = null;
   };
 
+  factory.voteUp = function() {
+    factory.stories.votes += 1
+  };
+
   return factory
 });
+
+// https://thinkster.io/learn-to-build-realtime-webapps/

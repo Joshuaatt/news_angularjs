@@ -2,7 +2,9 @@
   <h1>Here are the latest posted stories:</h1>
   <ul>
     <li ng-repeat="item in stories">
-      <a ui-serf="stories({ storyId: item.id })">{{ item.title }}</a>
+      <p>
+        <a ui-serf="stories">{{ item.title }}</a> {{ item.votes }} <a ng-click="StoriesFactory.voteUp(item)">&#8682</a>
+      </p>
     </li>
   </ul>
 </div>
@@ -16,3 +18,6 @@
     <button type="submit" class="btn btn-default">Submit</button>
   </form>
 </div>
+
+
+<!-- ({ storyId: item.id }) -->
